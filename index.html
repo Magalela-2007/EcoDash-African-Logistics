@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDash - African Logistics Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <h1> EcoDash</h1>
+            <p>Solar-Powered Medical Deliveries in Rural Kenya</p>
+            <button id="start-btn">▶ START MISSION</button>
+            <div class="instructions">
+                <p> Arrow Keys / WASD to move</p>
+                <p> Spacebar for boost</p>
+                <p> P to pause</p>
+                <p> R to restart</p>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- HUD -->
+        <div id="hud">
+            <div class="hud-item">
+                <span> BATTERY</span>
+                <div class="battery-bar">
+                    <div id="battery-fill"></div>
+                </div>
+                <span id="battery-text">100%</span>
+            </div>
+            <div class="hud-item">
+                <span> CARGO</span>
+                <span id="cargo-text">Medical Supplies</span>
+            </div>
+            <div class="hud-item">
+                <span> DELIVERIES</span>
+                <span id="deliveries-text">0/5</span>
+            </div>
+            <div class="hud-item">
+                <span> SCORE</span>
+                <span id="score-text">0</span>
+            </div>
+            <div class="hud-item">
+                <span> TIME</span>
+                <span id="time-text">05:00</span>
+            </div>
+            <div class="hud-item">
+                <span> EFFICIENCY</span>
+                <span id="efficiency-text">100%</span>
+            </div>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pause-screen" class="screen hidden">
+            <h2>⏸ PAUSED</h2>
+            <button id="resume-btn"> RESUME</button>
+            <button id="restart-pause-btn"> RESTART</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="screen hidden">
+            <h2> MISSION COMPLETE</h2>
+            <div id="final-stats"></div>
+            <button id="restart-btn"> PLAY AGAIN</button>
+            <button id="menu-btn"> MAIN MENU</button>
+        </div>
+    </div>
+
+    <script src="js/player.js"></script>
+    <script src="js/obstacles.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
